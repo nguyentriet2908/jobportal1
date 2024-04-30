@@ -34,7 +34,9 @@ try {
 	$about = $row['about'];
 	$empavatar = $row['avatar'];
 	$current_year = date('Y');
-	$myage = $current_year - $byear;
+	$current_year_num = intval($current_year);
+	$byear_num = intval($byear);
+	$myage = $current_year_num - $byear_num;
 	$myedu = $row['education'];
 	$mytitle = $row['title'];
 	$mymail = $row['email'];
