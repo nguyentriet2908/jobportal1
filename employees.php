@@ -197,16 +197,79 @@ if (isset($_GET['page'])) {
 
                         <div class="sorting-header">
                             <h3 class="sorting-title">Employees</h3>
+                            <form method="post" action="employees.php" class="m-5">
+                                <input type="text" placeholder="Search employees" name="search" autocomplete="off">
+                                <button class="btn btn-dark" name="submit">Search</button>
+                            </form>
                         </div>
-                        <form method="post" action="employees.php" class="m-5">
-                            <input type="text" placeholder="Search employees" name="search" autocomplete="off">
-                            <button class="btn btn-dark" name="submit">Search</button>
-                        </form>
-                    </div>
 
+                    </div>
+					
                     <div class="employee-grid-wrapper">
                         <div class="GridLex-gap-15-wrappper">
                             <div class="GridLex-grid-noGutter-equalHeight">
+								<?php
+									if(isset($_POST['submit'])){
+										$search = $_POST['search'];
+										require 'constants/db_config.php';
+								try {
+									$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+									$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+									$stmt = $conn->prepare("SELECT * FROM tbl_users WHERE role = 'employee' AND (first_name LIKE '%$search%' OR about LIKE '%$search%'
+									OR country LIKE '%$search%' OR city LIKE '%$search%') ORDER BY first_name LIMIT $page1,16");
+									$stmt->execute();
+									$result = $stmt->fetchAll();
+									foreach ($result as $row) {
+										$empavatar = $row['avatar'];
+								?>
+                                <div class="GridLex-col-3_sm-4_xs-6_xss-12">
+                                    <div class="employee-grid-item">
+                                        <div class="action">
+                                            <div class="row gap-10">
+                                                <div class="col-xs-6 col-sm-6">
+                                                    <div class="text-left">
+                                                        <button class="btn"><i class="icon-heart"></i></button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-6">
+                                                    <div class="text-right">
+                                                        <a class="btn text-right" href="employee-detail.html"><i
+                                                                class="icon-action-redo"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a target="_blank"
+                                            href="employee-detail.php?empid=<?php echo $row['member_no']; ?>"
+                                            class="clearfix">
+                                            <div class="image clearfix">
+                                                <?php
+														if ($empavatar == null) {
+															print '<center><img class="img-circle autofit2" src="images/default.jpg" alt="image"  /></center>';
+														} else {
+															echo '<center><img class="img-circle autofit2" alt="image" src="data:image/jpeg;base64,' . base64_encode($empavatar) . '"/></center>';
+														}
+														?>
+                                            </div>
+                                            <div class="content">
+                                                <h4><?php echo $row['first_name'] ?> <?php echo $row['last_name'] ?>
+                                                </h4>
+                                                <p class="location"><i class="fa fa-map-marker"></i>
+                                                    <?php echo $row['country'] ?></p>
+                                                <h6 class="text-primary">Education : <?php echo $row['education'] ?>
+                                                </h6>
+                                                <h6 class="text-primary"><?php echo $row['title'] ?></h6>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <?php
+									}
+								} catch (PDOException $e) {
+								}
+							}else{
+								?>
+
                                 <?php
 								require 'constants/db_config.php';
 								try {
@@ -263,6 +326,7 @@ if (isset($_GET['page'])) {
 									}
 								} catch (PDOException $e) {
 								}
+							}
 								?>
                             </div>
                         </div>
