@@ -199,7 +199,7 @@ if (isset($_GET['page'])) {
                             <h3 class="sorting-title">Employees</h3>
                         </div>
                         <form method="post" action="employees.php" class="m-5">
-                            <input type="text" placeholder="Search courses" name="search" autocomplete="off">
+                            <input type="text" placeholder="Search employees" name="search" autocomplete="off">
                             <button class="btn btn-dark" name="submit">Search</button>
                         </form>
                     </div>
