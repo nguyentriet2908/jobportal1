@@ -139,7 +139,7 @@ include 'constants/check-login.php';
 
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					<h4 class="modal-title text-center">Create your account for free</h4>
+					<h4 class="modal-title text-center">Create your account</h4>
 				</div>
 
 				<div class="modal-body">
@@ -171,8 +171,8 @@ include 'constants/check-login.php';
 			<div class="hero" style="background-image:url('images/hero-header/slbktv.jpg');">
 				<div class="container">
 
-					<h1>your bright future starts here now</h1>
-					<p>Finding your job on BKJob</p>
+					<h1>WELCOME TO BKJOB</h1>
+					<p>Find your job</p>
 
 					<div class="main-search-form-wrapper">
 
@@ -254,72 +254,6 @@ include 'constants/check-login.php';
 				</div>
 
 			</div>
-
-
-			<!-- <div class="post-hero bg-light">
-
-				<div class="container">
-
-					<div class="process-item-wrapper mt-20">
-
-						<div class="row">
-
-							<div class="col-sm-4">
-
-								<div class="process-item clearfix">
-
-									<div class="icon">
-										<i class="flaticon-line-icon-set-magnification-lens"></i>
-									</div>
-
-									<div class="content">
-										<h5>01 / Search for jobs</h5>
-									</div>
-
-								</div>
-
-							</div>
-
-							<div class="col-sm-4">
-
-								<div class="process-item clearfix">
-
-									<div class="icon">
-										<i class="flaticon-line-icon-set-pencil"></i>
-									</div>
-
-									<div class="content">
-										<h5>02 / Apply a Job</h5>
-									</div>
-
-								</div>
-
-							</div>
-
-							<div class="col-sm-4">
-
-								<div class="process-item clearfix">
-
-									<div class="icon">
-										<i class="flaticon-line-icon-set-calendar"></i>
-									</div>
-
-									<div class="content">
-										<h5>03 / Start Working</h5>
-									</div>
-
-								</div>
-
-							</div>
-
-						</div>
-
-					</div>
-
-				</div>
-
-			</div> -->
-
 
 			<div class="pt-0 pb-50">
 
@@ -505,7 +439,7 @@ include 'constants/check-login.php';
 			</div>
 
 
-			<!-- <footer class="footer-wrapper">
+			<footer class="footer-wrapper">
 
 				<div class="main-footer">
 
@@ -520,8 +454,8 @@ include 'constants/check-login.php';
 									<div class="col-sm-6 col-md-4">
 
 										<div class="footer-about-us">
-											<h5 class="footer-title">About Nightingale Jobs</h5>
-											<p>Nightingale Jobs is a job portal, online job management system developed by Nathaniel Nkrumah for his project in february 2018.</p>
+											<h5 class="footer-title">About BKJob</h5>
+											<p>BKJob is a job portal, online job management system</p>
 
 										</div>
 
@@ -547,12 +481,10 @@ include 'constants/check-login.php';
 
 							<div class="col-sm-12 col-md-3 mt-30-sm">
 
-								<h5 class="footer-title">Nightingale Jobs Contact</h5>
+								<h5 class="footer-title">BKJob Contact</h5>
 
-								<p>Address : Takoradi, School Junction PO.BOX AX40</p>
-								<p>Email : <a href="mailto:nightingale.nath2@gmail.com">nightingale.nath2@gmail.com</a></p>
-								<p>Phone : <a href="tel:+233546607474">+233 546 607 474</a></p>
-
+								<p>Address : 268 Lý Thường Kiệt, Phường 14, Quận 10, Thành phố Hồ Chí Minh</p>
+								<p>Email : <a href="mailto:nightingale.nath2@gmail.com">bkjob@hcmut.edu.vn</a></p>
 
 							</div>
 
@@ -563,7 +495,7 @@ include 'constants/check-login.php';
 
 				</div>
 
-				<div class="bottom-footer">
+				<!-- <div class="bottom-footer">
 
 					<div class="container">
 
@@ -595,9 +527,9 @@ include 'constants/check-login.php';
 
 					</div>
 
-				</div>
+				</div> -->
 
-			</footer> -->
+			</footer>
 
 		</div>
 
