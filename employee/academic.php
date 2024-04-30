@@ -34,13 +34,14 @@ $page = 1;
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Nightingale Jobs - Academic Qualifications</title>
-    <meta name="description" content="Online Job Management / Job Portal" />
-    <meta name="keywords"
-        content="job, work, resume, applicants, application, employee, employer, hire, hiring, human resource management, hr, online job management, company, worker, career, recruiting, recruitment" />
-    <meta name="author" content="BwireSoft">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta property="og:image" content="http://<?php echo "$actual_link"; ?>/images/banner.jpg" />
+
+<title>BKJob - Academic Qualifications</title>
+	<meta name="description" content="Online Job Management / Job Portal" />
+	<meta name="keywords" content="job, work, resume, applicants, application, employee, employer, hire, hiring, human resource management, hr, online job management, company, worker, career, recruiting, recruitment" />
+	<meta name="author" content="BwireSoft">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="http://<?php echo "$actual_link"; ?>/images/banner.jpg" />
+
     <meta property="og:image:secure_url" content="https://<?php echo "$actual_link"; ?>/images/banner.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="500" />
@@ -89,7 +90,27 @@ $page = 1;
 
             <nav class="navbar navbar-default navbar-fixed-top navbar-sticky-function">
 
-                <div class="container">
+<div class="container">
+					
+					<div class="logo-wrapper">
+						<div class="logo">
+							<a href="../"><img width="50" height="50" src="../images/logo.png" alt="Logo" /></a>
+						</div>
+					</div>
+					
+					<div id="navbar" class="navbar-nav-wrapper navbar-arrow">
+					
+						<ul class="nav navbar-nav" id="responsive-menu">
+						
+							<li>
+							
+								<a href="../">Home</a>
+								
+							</li>
+							
+							<li>
+								<a href="../job-list.php">Job List</a>
+
 
                     <div class="logo-wrapper">
                         <div class="logo">
@@ -105,7 +126,23 @@ $page = 1;
 
                                 <a href="../">Home</a>
 
-                            </li>
+
+<div class="breadcrumb-wrapper">
+			
+            <div class="container">
+            
+                <ol class="breadcrumb-list booking-step">
+                    <li><a href="../">BKJob</a></li>
+                    <li><span>Academic Qualifications</span></li>
+                </ol>
+                
+            </div>
+            
+        </div>
+    
+        
+        <div class="admin-container-wrapper">
+
 
                             <li>
                                 <a href="../job-list.php">Job List</a>
@@ -182,8 +219,57 @@ $page = 1;
 										echo '<center><img class="img-circle autofit2" alt="image" title="'.$myfname.'"  src="data:image/jpeg;base64,'.base64_encode($myavatar).'"/></center>';	
 										}
 										?>
-                                        </div>
-                                        <br>
+
+</div>
+										<br>
+										
+										
+										<h4><?php echo "$myfname"; ?> <?php echo "$mylname"; ?></h4>
+										<p class="user-role"><?php echo "$mytitle"; ?></p>
+										
+									</div>
+									
+									<div class="admin-user-action text-center">
+									
+										<a target="_blank" href="my_cv" class="btn btn-primary btn-sm btn-inverse">View my CV</a>
+										
+									</div>
+									
+									<ul class="admin-user-menu clearfix">
+										<li>
+											<a href="./"><i class="fa fa-user"></i> Profile</a>
+										</li>
+										<li class="">
+										<a href="change-password.php"><i class="fa fa-key"></i> Change Password</a>
+										</li>
+										<li  >
+											<a href="qualifications.php"><i class="fa fa-trophy"></i> Professional Qualifications</a>
+										</li>
+										<li>
+											<a href="language.php"><i class="fa fa-language"></i> Language Proficiency</a>
+										</li>
+										<li>
+											<a href="training.php"><i class="fa fa-gears"></i> Training & Workshop</a>
+										</li>
+										<li class="active">
+											<a href="academic.php"><i class="fa fa-graduation-cap"></i> Academic Qualifications</a>
+										</li>
+										<li>
+											<a href="experience.php"><i class="fa fa-briefcase"></i> Working Experience</a>
+										</li>
+										<li>
+											<a href="attachments.php"><i class="fa fa-folder-open"></i> Other Attachments</a>
+										</li>
+										<li>
+											<a href="applied-jobs.php"><i class="fa fa-bookmark"></i> Applied Jobs</a>
+										</li>
+										<li>
+											<a href="../logout.php"><i class="fa fa-sign-out"></i> Logout</a>
+										</li>
+									</ul>
+									
+								</div>
+
 
 
                                         <h4><?php echo "$myfname"; ?> <?php echo "$mylname"; ?></h4>
@@ -267,7 +353,7 @@ $page = 1;
                                     $result = $stmt->fetchAll();
                                     foreach($result as $row)
                                     {
-									 $ccountry = $row['country'];
+									 $country = $row['country'];
 									 $institution = $row['institution'];
 									 $course = $row['course'];
 									 $timeframe = $row['timeframe'];
@@ -409,12 +495,10 @@ $page = 1;
                                     foreach($resultb as $rowb)
                                     {
 										?>
-                                                                                    <option
-                                                                                        <?php if ($ccountry == $rowb['country_name']) { print ' selected '; } ?>
-                                                                                        value="<?php echo $rowb['country_name']; ?>">
-                                                                                        <?php echo $rowb['country_name']; ?>
-                                                                                    </option>
-                                                                                    <?php
+
+<option <?php if ($country == $rowb['country_name']) { print ' selected '; } ?> value="<?php echo $rowb['country_name']; ?>"><?php echo $rowb['country_name']; ?></option>
+										<?php
+
 		
 	                                }
 
@@ -573,81 +657,66 @@ $page = 1;
 
                                             </ul>
 
-                                        </div>
 
+</div>
+									
+<div class="mt-30">
 
+    <a data-toggle="modal" href="#QualifModal" class="btn btn-primary btn-lg">Add new</a>
+    
+</div>
+<div id="QualifModal" class="modal fade login-box-wrapper" tabindex="-1" data-width="550" style="display: none;" data-backdrop="static" data-keyboard="false" data-replace="true">
 
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+ <h4 class="modal-title text-center">Add academic qualifications</h4>
+</div>
 
-                                    </div>
+<div class="modal-body">
+<form action="app/add-academic-qualification.php" method="POST" autocomplete="off" enctype="multipart/form-data">
+<div class="row gap-20">
+<div class="col-sm-12 col-md-12">
+            
+<div class="form-group">
+<label>Education Level</label>
+<select name="level" required class="selectpicker show-tick form-control" data-live-search="false">
+<option disabled value="">Select</option>
+<option value="Advanced Diploma">Advanced Diploma</option>
+<option value="Advanced Level (ACSE)">Advanced Level (ACSE)</option>
+<option value="Certificate">Certificate</option>
+<option value="Degree">Degree</option>
+<option value="Diploma">Diploma</option>
+<option value="Master Degree">Master Degree</option>
+<option value="Ordinary Level (CSE)">Ordinary Level (CSE)</option>
+<option value="PHd">PHd</option>
+<option value="Post Graduate Diploma">Post Graduate Diploma</option>
 
-                                    <div class="mt-30">
+</select>
+</div>
+                
+</div>
 
-                                        <a data-toggle="modal" href="#QualifModal" class="btn btn-primary btn-lg">Add
-                                            new</a>
+<div class="col-sm-6 col-md-6">
+            
+<div class="form-group">
+<label>Country</label>
+<select name="country" required class="selectpicker show-tick form-control" data-live-search="true">
+<option disabled value="">Select</option>
+<?php
 
-                                    </div>
-                                    <div id="QualifModal" class="modal fade login-box-wrapper" tabindex="-1"
-                                        data-width="550" style="display: none;" data-backdrop="static"
-                                        data-keyboard="false" data-replace="true">
-
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal"
-                                                aria-hidden="true">&times;</button>
-                                            <h4 class="modal-title text-center">Add academic qualifications</h4>
-                                        </div>
-
-                                        <div class="modal-body">
-                                            <form action="app/add-academic-qualification.php" method="POST"
-                                                autocomplete="off" enctype="multipart/form-data">
-                                                <div class="row gap-20">
-                                                    <div class="col-sm-12 col-md-12">
-
-                                                        <div class="form-group">
-                                                            <label>Education Level</label>
-                                                            <select name="level" required
-                                                                class="selectpicker show-tick form-control"
-                                                                data-live-search="false">
-                                                                <option disabled value="">Select</option>
-                                                                <option value="Advanced Diploma">Advanced Diploma
-                                                                </option>
-                                                                <option value="Advanced Level (ACSE)">Advanced Level
-                                                                    (ACSE)</option>
-                                                                <option value="Certificate">Certificate</option>
-                                                                <option value="Degree">Degree</option>
-                                                                <option value="Diploma">Diploma</option>
-                                                                <option value="Master Degree">Master Degree</option>
-                                                                <option value="Ordinary Level (CSE)">Ordinary Level
-                                                                    (CSE)</option>
-                                                                <option value="PHd">PHd</option>
-                                                                <option value="Post Graduate Diploma">Post Graduate
-                                                                    Diploma</option>
-
-                                                            </select>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <div class="col-sm-6 col-md-6">
-
-                                                        <div class="form-group">
-                                                            <label>Country</label>
-                                                            <select name="country" required
-                                                                class="selectpicker show-tick form-control"
-                                                                data-live-search="true">
-                                                                <option disabled value="">Select</option>
-                                                                <?php
 									$stmtb = $conn->prepare("SELECT * FROM tbl_countries ORDER BY country_name");
                                     $stmtb->execute();
                                     $resultb = $stmtb->fetchAll();
 
                                     foreach($resultb as $rowb)
                                     {
+									$country = $rowb['country_name'];
 										?>
-                                                                <option
-                                                                    <?php if ($ccountry == $rowb['country_name']) { print ' selected '; } ?>
-                                                                    value="<?php echo $rowb['country_name']; ?>">
-                                                                    <?php echo $rowb['country_name']; ?></option>
-                                                                <?php
+
+<option <?php if ($country == $rowb['country_name']) { print ' selected '; } ?> value="<?php echo $rowb['country_name']; ?>"><?php echo $rowb['country_name']; ?></option>
+<!-- <option value="<?php echo $rowb['country_name']; ?>"> <?php echo $country; ?> </option> -->
+<?php
+
 		
 	                                }
 
@@ -656,7 +725,135 @@ $page = 1;
                                                             </select>
                                                         </div>
 
-                                                    </div>
+						
+<div class="col-sm-6 col-md-6">
+				
+<div class="form-group"> 
+<label>Institution Name</label>
+<input class="form-control" placeholder="Enter institution name" type="text" name="institution" required> 
+</div>
+
+ </div>
+
+ <div class="col-sm-12 col-md-6">
+
+<div class="form-group"> 
+<label>Course Title</label>
+<input class="form-control" placeholder="Enter course name" type="text" name="course" required> 
+</div>
+
+</div>
+
+   <div class="col-sm-12 col-md-6">
+
+<div class="form-group"> 
+<label>Time Frame</label>
+<input class="form-control" placeholder="Eg: 2015 To 2016" type="text" name="timeframe" required> 
+</div>
+
+</div>
+
+   <div class="col-sm-12 col-md-6">
+
+<div class="form-group"> 
+<label>Attach your certificate</label>
+<input class="form-control" accept="application/pdf" type="file" name="certificate" required> 
+</div>
+
+</div>
+
+   <div class="col-sm-12 col-md-6">
+
+<div class="form-group"> 
+<label>Academic Transcript</label>
+<input class="form-control" accept="application/pdf" type="file" name="transcript" required> 
+</div>
+
+
+</div>
+</div>
+
+<div class="modal-footer text-center">
+<button type="submit" class="btn btn-primary">Submit</button>
+<button type="button" data-dismiss="modal" class="btn btn-primary btn-inverse">Close</button>
+</div>
+</form>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<footer class="footer-wrapper">
+
+<div class="main-footer">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-sm-12 col-md-9">
+
+<div class="row">
+
+<div class="col-sm-6 col-md-4">
+
+    <div class="footer-about-us">
+        <h5 class="footer-title">About BKJob</h5>
+        <p>BKJob is a job portal, online job management system</p>
+
+    </div>
+
+</div>
+
+<div class="col-sm-6 col-md-5 mt-30-xs">
+    <h5 class="footer-title">Quick Links</h5>
+    <ul class="footer-menu clearfix">
+        <li><a href="./">Home</a></li>
+        <li><a href="job-list.php">Job List</a></li>
+        <li><a href="employers.php">Employers</a></li>
+        <li><a href="employees.php">Employees</a></li>
+        <li><a href="contact.php">Contact Us</a></li>
+        <li><a href="#">Go to top</a></li>
+
+    </ul>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-sm-12 col-md-3 mt-30-sm">
+
+<h5 class="footer-title">BKJob Contact</h5>
+
+<p>Address : 268 Lý Thường Kiệt, Phường 14, Quận 10, Thành phố Hồ Chí Minh</p>
+<p>Email : <a href="mailto:nightingale.nath2@gmail.com">bkjob@hcmut.edu.vn</a></p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="bottom-footer"></div>
+
+</footer>
+
+</div>
+
 
 
                                                     <div class="col-sm-6 col-md-6">

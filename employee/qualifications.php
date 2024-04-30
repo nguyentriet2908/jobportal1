@@ -33,7 +33,7 @@ $page = 1;
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Bwire Jobs - Professional Qualifications</title>
+	<title>BKJob - Professional Qualifications</title>
 	<meta name="description" content="Online Job Management / Job Portal" />
 	<meta name="keywords" content="job, work, resume, applicants, application, employee, employer, hire, hiring, human resource management, hr, online job management, company, worker, career, recruiting, recruitment" />
 	<meta name="author" content="BwireSoft">
@@ -94,7 +94,7 @@ $page = 1;
 					
 					<div class="logo-wrapper">
 						<div class="logo">
-							<a href="../"><img src="../images/logo.png" alt="Logo" /></a>
+							<a href="../"><img width="50" height="50" src="../images/logo.png" alt="Logo" /></a>
 						</div>
 					</div>
 					
@@ -152,7 +152,7 @@ $page = 1;
 				<div class="container">
 				
 					<ol class="breadcrumb-list booking-step">
-						<li><a href="../">Bwire Jobs</a></li>
+						<li><a href="../">BKJob</a></li>
 						<li><span>Professional Qualifications</span></li>
 					</ol>
 					
@@ -213,9 +213,6 @@ $page = 1;
 										</li>
 										<li>
 											<a href="training.php"><i class="fa fa-gears"></i> Training & Workshop</a>
-										</li>
-										<li>
-											<a href="referees.php"><i class="fa fa-users"></i> Referees</a>
 										</li>
 										<li>
 											<a href="academic.php"><i class="fa fa-graduation-cap"></i> Academic Qualifications</a>
