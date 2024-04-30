@@ -1,0 +1,10 @@
+[
+    {
+    email:longemployee@gmail.com;
+    password: Long12345
+    },
+    {
+        email: longadmin@gmail.com;
+        password: Long12345
+    },
+]
