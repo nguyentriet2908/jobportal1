@@ -33,7 +33,7 @@ $page = 1;
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Nightingale Jobs - Other Attachments</title>
+	<title>BKJob - Other Attachments</title>
 	<meta name="description" content="Online Job Management / Job Portal" />
 	<meta name="keywords" content="job, work, resume, applicants, application, employee, employer, hire, hiring, human resource management, hr, online job management, company, worker, career, recruiting, recruitment" />
 	<meta name="author" content="BwireSoft">
@@ -94,7 +94,7 @@ $page = 1;
 					
 					<div class="logo-wrapper">
 						<div class="logo">
-							<a href="../"><img src="../images/logo.png" alt="Logo" /></a>
+							<a href="../"><img width="50" height="50" src="../images/logo.png" alt="Logo" /></a>
 						</div>
 					</div>
 					
@@ -152,7 +152,7 @@ $page = 1;
 				<div class="container">
 				
 					<ol class="breadcrumb-list booking-step">
-						<li><a href="../">Nightingale Jobs</a></li>
+						<li><a href="../">BKJob</a></li>
 						<li><span>Other Attachments</span></li>
 					</ol>
 					
@@ -213,9 +213,6 @@ $page = 1;
 										</li>
 										<li>
 											<a href="training.php"><i class="fa fa-gears"></i> Training & Workshop</a>
-										</li>
-										<li>
-											<a href="referees.php"><i class="fa fa-users"></i> Referees</a>
 										</li>
 										<li>
 											<a href="academic.php"><i class="fa fa-graduation-cap"></i> Academic Qualifications</a>
@@ -503,97 +500,63 @@ $page = 1;
 			</div>
 
 			<footer class="footer-wrapper">
-			
+
 				<div class="main-footer">
-				
+
 					<div class="container">
-					
+
 						<div class="row">
-						
+
 							<div class="col-sm-12 col-md-9">
-							
+
 								<div class="row">
-								
+
 									<div class="col-sm-6 col-md-4">
-									
+
 										<div class="footer-about-us">
-											<h5 class="footer-title">About Nightingale Jobs</h5>
-											<p>Nightingale Jobs is a job portal, online job management system developed by Nathaniel Nkrumah for his project in february 2018.</p>
-										
+											<h5 class="footer-title">About BKJob</h5>
+											<p>BKJob is a job portal, online job management system</p>
+
 										</div>
 
 									</div>
-									
+
 									<div class="col-sm-6 col-md-5 mt-30-xs">
 										<h5 class="footer-title">Quick Links</h5>
 										<ul class="footer-menu clearfix">
-											<li><a href="../">Home</a></li>
-											<li><a href="../job-list.php">Job List</a></li>
-											<li><a href="../employers.php">Employers</a></li>
-											<li><a href="../employees.php">Employees</a></li>
-											<li><a href="../contact.php">Contact Us</a></li>
+											<li><a href="./">Home</a></li>
+											<li><a href="job-list.php">Job List</a></li>
+											<li><a href="employers.php">Employers</a></li>
+											<li><a href="employees.php">Employees</a></li>
+											<li><a href="contact.php">Contact Us</a></li>
 											<li><a href="#">Go to top</a></li>
 
 										</ul>
-									
+
 									</div>
 
 								</div>
 
 							</div>
-							
+
 							<div class="col-sm-12 col-md-3 mt-30-sm">
-							
-								<h5 class="footer-title">Nightingale Jobs Contact</h5>
-								
-								<p>Address : Takoradi, School Junction PO.BOX AX40</p>
-								<p>Email : <a href="mailto:nightingale.nath2@gmail.com">nightingale.nath2@gmail.com</a></p>
-								<p>Phone : <a href="tel:+233546607474">+233 546 607 474</a></p>
-								
+
+								<h5 class="footer-title">BKJob Contact</h5>
+
+								<p>Address : 268 Lý Thường Kiệt, Phường 14, Quận 10, Thành phố Hồ Chí Minh</p>
+								<p>Email : <a href="mailto:nightingale.nath2@gmail.com">bkjob@hcmut.edu.vn</a></p>
 
 							</div>
 
-							
-						</div>
-						
-					</div>
-					
-				</div>
-				
-				<div class="bottom-footer">
-				
-					<div class="container">
-					
-						<div class="row">
-						
-							<div class="col-sm-4 col-md-4">
-					
-								<p class="copy-right">&#169; Copyright <?php echo date('Y'); ?> Nightingale Vision Software</p>
-								
-							</div>
-							
-							<div class="col-sm-4 col-md-4">
-							
-								<ul class="bottom-footer-menu">
-									<li><a >Developed by Nathaniel Nkrumah</a></li>
-								</ul>
-							
-							</div>
-							
-							<div class="col-sm-4 col-md-4">
-								<ul class="bottom-footer-menu for-social">
-									<li><a href="<?php echo "$tw"; ?>"><i class="ri ri-twitter" data-toggle="tooltip" data-placement="top" title="twitter"></i></a></li>
-									<li><a href="<?php echo "$fb"; ?>"><i class="ri ri-facebook" data-toggle="tooltip" data-placement="top" title="facebook"></i></a></li>
-									<li><a href="<?php echo "$ig"; ?>"><i class="ri ri-instagram" data-toggle="tooltip" data-placement="top" title="instagram"></i></a></li>
-								</ul>
-							</div>
-						
+
 						</div>
 
 					</div>
-					
+
 				</div>
-			
+
+				<div class="bottom-footer"></div>
+
 			</footer>
 			
 		</div>
