@@ -81,7 +81,7 @@ $page = 1;
 					
 					<div class="logo-wrapper">
 						<div class="logo">
-							<a href="../"><img src="../images/logo.png" alt="Logo" /></a>
+							<a href="../"><img width="50" height="50" src="../images/logo.png" alt="Logo" /></a>
 						</div>
 					</div>
 					
