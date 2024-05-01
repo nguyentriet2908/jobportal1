@@ -187,13 +187,88 @@ if (isset($_GET['jobid'])) {
                 <div class="container">
                     <div class="sorting-wrappper">
                         <div class="sorting-header">
-                            <h3 class="sorting-title">Applicants for the job <?php echo "$job_title"; ?></< /h3>
+                            <h3 class="sorting-title">Applicants for the job <?php echo "$job_title"; ?></h3>
+                            <form method="get" action="view-applicants.php" class="m-5">
+                                <input type="text" placeholder="Search employees" name="search" autocomplete="off">
+                                <input type="hidden" name="jobid" value="<?php echo "$job_id"; ?>">
+                                <button class="btn btn-dark" name="submit">Search</button>
+                            </form>
                         </div>
                     </div>
                     <div class="employee-grid-wrapper">
                         <div class="GridLex-gap-15-wrappper">
                             <div class="GridLex-grid-noGutter-equalHeight">
-								
+                                <?php
+									if(isset($_GET['search'])){
+										$search = $_GET['search'];
+										//unset($_SESSION['search']);
+										include '../constants/db_config.php';
+								$stmt = $conn->prepare("SELECT * FROM tbl_job_applications WHERE job_id = :jobid ORDER BY id LIMIT $page1,16");
+								$stmt->bindParam(':jobid', $job_id);
+								$stmt->execute();
+								$result = $stmt->fetchAll();
+								foreach ($result as $row) {
+									$post_date = date_format(date_create_from_format('m/d/Y', $row['application_date']), 'd');
+									$post_month = date_format(date_create_from_format('m/d/Y', $row['application_date']), 'F');
+									$post_year = date_format(date_create_from_format('m/d/Y', $row['application_date']), 'Y');
+									$emp_id = $row['member_no'];
+									$stmtb = $conn->prepare("SELECT * FROM tbl_users WHERE role = 'employee' AND member_no = '$emp_id' AND (first_name LIKE '%$search%' OR about LIKE '%$search%'
+									OR country LIKE '%$search%' OR city LIKE '%$search%')" );
+									$stmtb->execute();
+									$resultb = $stmtb->fetchAll();
+									foreach ($resultb as $rowb) {
+										$empavatar = $rowb['avatar']; ?>
+                                <div class="GridLex-col-3_sm-4_xs-6_xss-12">
+                                    <div class="employee-grid-item">
+                                        <div class="action">
+                                            <div class="row gap-10">
+                                                <div class="col-xs-6 col-sm-6">
+                                                    <div class="text-left">
+                                                        <button class="btn"><i class="icon-heart"></i></button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-6">
+                                                    <div class="text-right">
+                                                        <a class="btn text-right" href="employee-detail.html"><i
+                                                                class="icon-action-redo"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a target="_blank"
+                                            href="../employee-detail.php?empid=<?php echo $rowb['member_no']; ?>"
+                                            class="clearfix">
+                                            <div class="image clearfix">
+                                                <?php
+														if ($empavatar == null) {
+															print '<center><img class="img-circle autofit2" src="../images/default.jpg" alt="image"  /></center>';
+														} else {
+															echo '<center><img class="img-circle autofit2" alt="image" src="data:image/jpeg;base64,' . base64_encode($empavatar) . '"/></center>';
+														}
+														?>
+                                            </div>
+                                            <div class="content">
+
+                                                <h4><?php echo $rowb['first_name'] ?> <?php echo $rowb['last_name'] ?>
+                                                </h4>
+                                                <p class="location"><i class="fa fa-map-marker"></i>
+                                                    <?php echo $rowb['country'] ?></p>
+
+                                                <h6 class="text-primary">Education : <?php echo $rowb['education'] ?>
+                                                </h6>
+
+                                                <h6 class="text-primary"><?php echo $rowb['title'] ?></h6>
+                                                <?php echo "$post_month"; ?> <?php echo "$post_date"; ?>,
+                                                <?php echo "$post_year"; ?>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <?php
+									}
+									}
+								}else{
+								?>
                                 <?php
 								include '../constants/db_config.php';
 								$stmt = $conn->prepare("SELECT * FROM tbl_job_applications WHERE job_id = :jobid ORDER BY id LIMIT $page1,16");
@@ -259,6 +334,7 @@ if (isset($_GET['jobid'])) {
                                 <?php
 									}
 								}
+							}
 								?>
                             </div>
                         </div>
