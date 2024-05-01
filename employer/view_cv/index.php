@@ -4,7 +4,7 @@ require '../.././constants/db_config.php';
 require '../constants/check-login.php';
 
 if ($user_online == "true") {
-if ($myrole == "employee") {
+if ($myrole == "employer") {
 }else{
 header("location:../");		
 }
@@ -14,7 +14,7 @@ header("location:../");
 
 $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+$myid = $_GET['employee'];
 $stmt = $conn->prepare("SELECT * FROM tbl_users WHERE member_no = '$myid'");
 $stmt->execute();
 $result = $stmt->fetchAll();
@@ -27,7 +27,9 @@ $mycountry = $row['country'];
 $mycity = $row['city'];
 $mystreet = $row['street'];
 $myzip = $row['zip'];
-
+$myfname = $row['first_name'];
+$mylname = $row['last_name'];
+$mydesc = $row['about'];
 }
 
 $pdf=new PDF_HTML_Table();
