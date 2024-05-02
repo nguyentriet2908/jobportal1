@@ -100,7 +100,7 @@ include 'constants/check-login.php';
 							</li>
 
 							<li>
-								<a href="employees.php">Employees</a>
+								<!-- <a href="employees.php">Employees</a> -->
 							</li>
 
 							<li>
@@ -467,7 +467,7 @@ include 'constants/check-login.php';
 											<li><a href="./">Home</a></li>
 											<li><a href="job-list.php">Job List</a></li>
 											<li><a href="employers.php">Employers</a></li>
-											<li><a href="employees.php">Employees</a></li>
+											<!-- <li><a href="employees.php">Employees</a></li> -->
 											<li><a href="contact.php">Contact Us</a></li>
 											<li><a href="#">Go to top</a></li>
 

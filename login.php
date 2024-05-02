@@ -119,7 +119,7 @@ include 'constants/check-login.php';
                             </li>
 
                             <li>
-                                <a href="employees.php">Employees</a>
+                                <!-- <a href="employees.php">Employees</a> -->
                             </li>
 
                             <li>
@@ -250,7 +250,7 @@ include 'constants/check-login.php';
                                                     <div class="col-sm-12 col-md-12">
                                                         <div class="login-box-link-action">
                                                             <a data-toggle="modal" onclick="reset_text()"
-                                                                href="#forgotPasswordModal">Forgot password?</a>
+                                                                href="#">Forgot password?</a>
                                                         </div>
                                                     </div>
 
@@ -268,7 +268,7 @@ include 'constants/check-login.php';
                                         </div>
                                     </form>
 
-                                    <div id="forgotPasswordModal" class="modal fade login-box-wrapper" tabindex="-1"
+                                    <!-- <div id="forgotPasswordModal" class="modal fade login-box-wrapper" tabindex="-1"
                                         style="display: none;" data-backdrop="static" data-keyboard="false"
                                         data-replace="true">
 
@@ -318,7 +318,7 @@ include 'constants/check-login.php';
                                                 class="btn btn-primary btn-inverse">Close</button>
                                         </div>
 
-                                    </div>
+                                    </div> -->
 
                                 </div>
 

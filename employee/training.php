@@ -116,9 +116,9 @@ $page = 1;
 								<a href="../employers.php">Employers</a>
 							</li>
 							
-							<li>
+							<!-- <li>
 								<a href="../employees.php">Employees</a>
-							</li>
+							</li> -->
 							
 							<li>
 								<a href="../contact.php">Contact Us</a>

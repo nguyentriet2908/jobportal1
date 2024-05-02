@@ -83,7 +83,7 @@ include 'constants/check-login.php';
 							</li>
 
 							<li>
-								<a href="employees.php">Employees</a>
+								<!-- <a href="employees.php">Employees</a> -->
 							</li>
 
 							<li>
