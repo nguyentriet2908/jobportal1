@@ -238,13 +238,10 @@ include 'constants/check-login.php';
 							<ul class="address-list">
 								<li>
 									<h5>Address</h5>
-									<address> Takoradi, <br /> PO.BOX AX40, <br />School Junction</address>
+									<address>268 Lý Thường Kiệt, Phường 14, Quận 10, Thành phố Hồ Chí Minh</address>
 								</li>
 								<li>
-									<h5>Email</h5><a href="mailto:nightingale.nath2@gmail.com">nightingale.nath2@gmail.com</a>
-								</li>
-								<li>
-									<h5>Phone Number</h5><a href="tel:+233 546 607 474">+233 546 607 474</a>
+									<h5>Email</h5><a href="mailto:bkjob@hcmut.edu.vn">bkjob@hcmut.edu.vn</a>
 								</li>
 
 								<li>
