@@ -111,7 +111,7 @@ include 'constants/check-login.php';
 			<div id="registerModal" class="modal fade login-box-wrapper" tabindex="-1" style="display: none;" data-backdrop="static" data-keyboard="false" data-replace="true">
 			
 				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>	<!-- character x closing the dialog -->
 					<h4 class="modal-title text-center">Create your account</h4>
 				</div>
 				

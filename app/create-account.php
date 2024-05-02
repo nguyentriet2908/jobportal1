@@ -58,14 +58,15 @@ function register_as_employee()
 		$fname = ucwords($_POST['fname']);
 		$lname = ucwords($_POST['lname']);
 		$email = $_POST['email'];
-		$login = md5($_POST['password']);
+		$login = md5($_POST['password']);		# MD5 HASHING
 
 		$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$stmt = $conn->prepare("INSERT INTO tbl_users (first_name, last_name, email, last_login, login, role, member_no) 
-	VALUES (:fname, :lname, :email, :lastlogin, :login, :role, :memberno)");
+								VALUES (:fname, :lname, :email, :lastlogin, :login, :role, :memberno)");
 		$stmt->bindParam(':fname', $fname);
 		$stmt->bindParam(':lname', $lname);
+		
 		$stmt->bindParam(':email', $email);
 		$stmt->bindParam(':lastlogin', $last_login);
 		$stmt->bindParam(':login', $login);
@@ -90,14 +91,15 @@ function register_as_employer()
 		$cname = ucwords($_POST['company']);
 		$ctype = ucwords($_POST['type']);
 		$email = $_POST['email'];
-		$login = md5($_POST['password']);
+		$login = md5($_POST['password']);	# MD5 HASHING
 
 		$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$stmt = $conn->prepare("INSERT INTO tbl_users (first_name, title, email, last_login, login, role, member_no) 
-	VALUES (:fname, :title, :email, :lastlogin, :login, :role, :memberno)");
+								VALUES (:fname, :title, :email, :lastlogin, :login, :role, :memberno)");
 		$stmt->bindParam(':fname', $cname);
 		$stmt->bindParam(':title', $ctype);
+
 		$stmt->bindParam(':email', $email);
 		$stmt->bindParam(':lastlogin', $last_login);
 		$stmt->bindParam(':login', $login);
