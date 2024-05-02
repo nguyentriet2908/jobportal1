@@ -167,7 +167,7 @@ if (isset($_GET['jobid'])) {
 
         </header>
 
-
+        
         <div class="main-wrapper">
 
             <div class="breadcrumb-wrapper">
